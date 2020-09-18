@@ -1,0 +1,325 @@
+/*ALLGEMEINE FARBEINSTELLUNGEN*/
+/*Shadow - Generator: https://www.cssmatic.com/box-shadow */
+.shadow-1 {
+    -webkit-box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.21);
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.21);
+}
+.shadow-3 {
+    -webkit-box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.75);
+}
+
+/* Gradient - Generator: https://www.colorzilla.com/gradient-editor/*/
+.gradient{
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.72) 1%, rgba(255,255,255,0.72) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0.72) 0%,rgba(255,255,255,0.72) 1%,rgba(255,255,255,0.72) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0.72) 0%,rgba(255,255,255,0.72) 1%,rgba(255,255,255,0.72) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8ffffff', endColorstr='#b8ffffff',GradientType=0 ); /* IE6-9 */
+}
+.gradient-black{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4c4c4c+0,595959+12,666666+25,474747+39,2c2c2c+50,000000+51,111111+60,2b2b2b+76,1c1c1c+91,131313+100;Black+Gloss+%231 */
+    background: rgb(76,76,76); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+}
+
+
+/*BACKGROUND-COLOR*/
+.green {background-color: green;}
+.blue {background-color: blue;}
+.red {background-color: red;}
+.yellow {background-color: yellow;}
+.gray {background-color: gray;}
+.lightgray {background-color: lightgray;}
+.darkgray {background-color: darkgray;}
+.black {background-color: black;}
+.white {background-color: white;}
+.lime {background-color: lime;}
+.fuchsia {background-color: fuchsia;}
+.aqua {background-color: aqua;}
+.pink {background-color: pink;}
+.orange {background-color: orange;}
+.gold {background-color: gold;}
+.olive {background-color: olive;}
+.forestgreen {background-color: forestgreen;}
+.teal {background-color: teal;}
+.lightblue {background-color: lightblue;}
+.royalblue {background-color: royalblue;}
+.brown {background-color: brown;}
+.sienna {background-color: sienna;}
+.peru {background-color: peru;}
+.sandybrown {background-color: sandybrown;}
+.lightgray {background-color: #cfcfcf;}
+
+/*TEXT-COLOR*/
+.text-green {color: green;}
+.text-blue {color: blue;}
+.text-red {color: red;}
+.text-yellow {color: yellow;}
+.text-gray {color: gray;}
+.text-lightgray {color: lightgray;}
+.text-darkgray {color: darkgray;}
+.text-black {color: black;}
+.text-white {color: white;}
+.text-lime {color: lime;}
+.text-fuchsia {color: fuchsia;}
+.text-aqua {color: aqua;}
+.text-pink {color: pink;}
+.text-orange {color: orange;}
+.text-gold {color: gold;}
+.text-olive {color: olive;}
+.text-forestgreen {color: forestgreen;}
+.text-teal {color: teal;}
+.text-lightblue {color: lightblue;}
+.text-royalblue {color: royalblue;}
+.text-brown {color: brown;}
+.text-sienna {color: sienna;}
+.text-peru {color: peru;}
+.text-sandybrown {color: sandybrown;}
+
+/*RAHMEN-COLOR*/
+.border-green {border-color: green;}
+.border-blue {border-color: blue;}
+.border-red {border-color: red;}
+.border-yellow {border-color: yellow;}
+.border-gray {border-color: gray;}
+.border-lightgray {border-color: lightgray;}
+.border-darkgray {border-color: darkgray;}
+.border-black {border-color: black;}
+.border-white {border-color: white;}
+.border-lime {border-color: lime;}
+.border-fuchsia {border-color: fuchsia;}
+.border-aqua {border-color: aqua;}
+.border-pink {border-color: pink;}
+.border-orange {border-color: orange;}
+.border-gold {border-color: gold;}
+.border-olive {border-color: olive;}
+.border-forestgreen {border-color: forestgreen;}
+.border-teal {border-color: teal;}
+.border-lightblue {border-color: lightblue;}
+.border-royalblue {border-color: royalblue;}
+.border-brown {border-color: brown;}
+.border-sienna {border-color: sienna;}
+.border-peru {border-color: peru;}
+.border-sandybrown {border-color: sandybrown;}
+
+
+
+
+
+
+
+
+
+
+/*WIDTH*/
+.w10 {width: 10%;}
+.w20 {width: 20%;}
+.w30 {width: 30%;}
+.w40 {width: 40%;}
+.w50 {width: 50%;}
+.w60 {width: 60%;}
+.w70 {width: 70%;}
+.w80 {width: 80%;}
+.w90 {width: 90%;}
+.w100 {width: 100%;}
+
+/*CENTER wenn Breite width definiert ist*/
+.center {margin: auto;}
+.text-center{text-align: center;}
+
+/*HOEHE*/
+.h10{height: 10%;}
+.h20{height: 20%;}
+.h30{height: 30%;}
+.h40{height: 40%;}
+.h50{height: 50%;}
+.h60{height: 60%;}
+.h70{height: 70%;}
+.h80{height: 80%;}
+.h90{height: 90%;}
+.h100{height: 100%;}
+
+/*PADDING: Abstand innen*/
+.pa5 {padding: 5px;}
+.pa10 {padding: 10px;}
+.pa15 {padding: 15px;}
+.pa20 {padding: 20px;}
+.pa25 {padding: 25px;}
+.pa30 {padding: 30px;}
+
+.pa10-top {padding-top: 10px;}
+.pa10-left {padding-left: 10px;}
+.pa10-bottom {padding-bottom: 10px;}
+.pa10-right {padding-right: 10px;}
+
+/*MARGIN: Abstand Aussen*/
+.ma5 {margin: 5px;}
+.ma10 {margin: 10px;}
+.ma15 {margin: 15px;}
+.ma20 {margin: 20px;}
+.ma25 {margin: 25px;}
+.ma30 {margin: 30px;}
+
+.ma10-top {margin-top: 10px;}
+.ma10-left {margin-left: 10px;}
+.ma10-bottom {margin-bottom: 10px;}
+.ma10-right {margin-right: 10px;}
+
+/*TEXT - FORMATIERUNGEN*/
+.text-fett {font-weight: bold;}
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-center {text-align: center;}
+.text-justify {text-align: justify;}
+.text-uppercase {text-transform: uppercase;}
+.text-lowercase {text-transform: lowercase;}
+.text-capitalize {text-transform: capitalize;}
+.text-none {text-decoration: none;}
+.text-overline {text-decoration: overline;}
+.text-underline {text-decoration: underline;}
+.text-line-through {text-decoration: line-through;}
+
+/*RAHMEN - FORMATIERUNGEN*/
+.border-1 {border: 1px;}
+.border-2 {border: 2px;}
+.border-3 {border: 3px;}
+.border-4 {border: 4px;}
+.border-5 {border: 5px;}
+
+/*RAHMEN - LINIEN*/
+.border-solid{border-style: solid;}
+.border-dotted{border-style: dotted;}
+.border-none{border-style: none;}
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------*/
+/*GRID - SYSTEM*/
+/*-------------------------------------------------------------*/
+.grid > * {
+    float: left;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* TIPP: nach einem grid immer ein DIV mit class clear erstellen, oder per CSS + * lösen oder :after! */
+.clear {
+    clear: both;
+    flex: none;
+}
+/*Variante 1*/
+.grid + * {
+    clear: both;
+    flex: none;
+}
+/*Variante 2: https://developer.mozilla.org/de/docs/Web/CSS/::after*/
+.grid3::after > *{
+    clear: both;
+    flex: none;
+}
+
+/*SMALL = s (Handys)*/
+@media screen and (min-width:0px) and (max-width:599px) {
+    .s12 {width: 100%;}
+    .s11 {width: calc(100% / 12 * 11);}
+    .s10 {width: calc(100% / 12 * 10);}
+    .s9 {width: calc(100% / 12 * 9);}
+    .s8 {width: calc(100% / 12 * 8);}
+    .s7 {width: calc(100% / 12 * 7);}
+    .s6 {width: calc(100% / 12 * 6);}
+    .s5 {width: calc(100% / 12 * 5);}
+    .s4 {width: calc(100% / 12 * 4);}
+    .s3 {width: calc(100% / 12 * 3);}
+    .s2 {width: calc(100% / 12 * 2);}
+    .s1 {width: calc(100% / 12 * 1);}
+}
+
+/*MIDDLE = m (Tablets)*/
+@media screen and (min-width:600px) and (max-width:1099px) {
+    .m12 {width: 100%;}
+    .m11 {width: calc(100% / 12 * 11);}
+    .m10 {width: calc(100% / 12 * 10);}
+    .m9 {width: calc(100% / 12 * 9);}
+    .m8 {width: calc(100% / 12 * 8);}
+    .m7 {width: calc(100% / 12 * 7);}
+    .m6 {width: calc(100% / 12 * 6);}
+    .m5 {width: calc(100% / 12 * 5);}
+    .m4 {width: calc(100% / 12 * 4);}
+    .m3 {width: calc(100% / 12 * 3);}
+    .m2 {width: calc(100% / 12 * 2);}
+    .m1 {width: calc(100% / 12 * 1);}
+}
+
+/*LARGE = l (PC's')*/
+@media screen and (min-width:1100px) {
+    .l12 {width: 100%;}
+    .l11 {width: calc(100% / 12 * 11);}
+    .l10 {width: calc(100% / 12 * 10);}
+    .l9 {width: calc(100% / 12 * 9);}
+    .l8 {width: calc(100% / 12 * 8);}
+    .l7 {width: calc(100% / 12 * 7);}
+    .l6 {width: calc(100% / 12 * 6);}
+    .l5 {width: calc(100% / 12 * 5);}
+    .l4 {width: calc(100% / 12 * 4);}
+    .l3 {width: calc(100% / 12 * 3);}
+    .l2 {width: calc(100% / 12 * 2);}
+    .l1 {width: calc(100% / 12 * 1);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*POSITION*/
+.pos-fix  {position: fixed;}
+.pos-rel  {position: relative;}
+.pos-abs  {position: absolute;}
+
+.top0{top: 0px;}
+.left0{left: 0px;}
+.right0{right: 0px;}
+.bottom0{bottom: 0px;}
+
+/*FLOAT*/
+.float-left {float: left;}
+.float-right {float: right;}
+/* TIPP: nach einem FLOAT immer ein DIV mit class clear erstellen */
+.clear {
+    clear: both;
+    flex: none;
+}
+
+/*DISPLAY*/
+.display-none{display: none;}
+.display-inline{display: inline;}
+.display-block{display: block;}
+.display-inline-block{display: inline-block;}
+
+
+
+
+/*class="text-green"*/
