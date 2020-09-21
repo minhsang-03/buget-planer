@@ -1,104 +1,83 @@
-<!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="test.css">
-    <link rel="icon" type="image/" href="/favicon.ico">
-    
 </head>
-
-
-    <body class="bg-main">
-    <header class="h60-px" >
-        <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/710/3747343710_ddb931df-3a0d-4972-94d2-297f36396130.png?cb=1600346120" class="w153 links"  >    
-    <nav>
-        <a href="index.php" class="button algin hover hover-bg" >Home</a>
-        <a href="expenditure.php" class="button hover hover-bg">expenditure</a>
-        <a href="income.php" class="button hover hover-bg">income</a>
-    </nav> 
- 
-    </header>
+<body>
     
-            <aside>
-               
-            </aside>
-
-            <main>
-                
-                     
-                
-                <a href="aktelles Jahr">aktelles Jahr</a>
-                <a href="akteller Monat">akteller Monat</a>
-                <p>Einnahmen</p>
-                <p>Ausgaben</p>
-                <p>Differenz</p>
-                <h3>expenditure</h3>
-                <table style="width:20%" class="float">
-                    <tr>
-                        <th>date</th>
-                        <th>amount</th> <!--kopfzeile--> 
-                        <th>action</th>
-                    </tr>
-                    
-                    <tr>
-                        <td>ä</td>
-                        <td>ä</td> <!--attribute--> 
-                        <td>ä</td>
-                    </tr>
-                    <tr>
-                        <td>ä</td>
-                        <td>ä</td>
-                        <td>ä</td>
-                    </tr>
-                    <tr>
-                        <td>ä</td>
-                        <td>ä</td>
-                        <td>ä</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    
-                    </table>
-
-                    <h3>income</h3>
-                    <table style="width:50%">
-                        <tr>
-                            <th>date</th>
-                            <th>amount</th> <!--kopfzeile--> 
-                            <th>action</th>
-                        </tr>
-                        
-                        <tr>
-                            <td>ä</td>
-                            <td>ä</td> <!--attribute--> 
-                            <td>ä</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+        <header>
+            <div class="fixed-header">
+                <a href="index.php"><img src="img/Logo.png" alt="Logo" class="logo"></a>
+                <nav class="button-nav">
+                    <a href="index.php" class="hover button-nav">Home</a>
+                    <a href="expenditure.php" class="hover button-nav">Expenditure</a>
+                    <a href="income.php" class="hover button-nav">Income</a>
+                </nav>
+            </div>
+        </header>
+  
+    
+         <main>
+            <div class="abstand-header">
+                <br>
+                <a href="aktelles Jahr" class="button-link hover-bg">Current Year</a>
+                <a href="akteller Monat" class="button-link hover-bg">Current Month</a>
+                <p class="green">Income</p>
+                <p class="red">Expenditure</p>
+                <p class="blau">Difference</p>
+                <p class="titel">Income</p>
+                <div>
+                    <table class="tabelle">
+                            <tr>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>   
+                        <div class=tabelle-linie>
+                            <tr>
+                                <td>ä</td>
+                                <td>ä</td> 
+                                <td><a href="update.php"><img src="img/pencile.svg"><a href="income.php"><img src="img/delete.svg"></td>
+                            </tr>
+                            <tr>
+                                <td>ä</td>
+                                <td>ä</td>
+                                <td><a href="update.php"><img src="img/pencile.svg"><a href="income.php"><img src="img/delete.svg"></td>
+                            </tr>
+                            <tr>
+                                <td>ä</td>
+                                <td>ä</td>
+                                <td><a href="update.php"><img src="img/pencile.svg"><a href="income.php"><img src="img/delete.svg"></td>
+                            </tr>
+                        </div>
                         </table>
-            </main>
-
-            <footer>
-               
-            </footer>
-        </div>
-    </body>
+                        <p class="titel">Expenditure</p>
+                        <table class="tabelle">
+                            <tr2>
+                                <th>Date</th>
+                                <th>Amount</th> <!--kopfzeile--> 
+                                <th>Action</th>
+                            </tr>
+                            
+                            <tr>
+                                <td>ä</td>
+                                <td>ä</td> <!--attribute--> 
+                                <td><a href="update.php"><img src="img/pencile.svg"><a href="income.php"><img src="img/delete.svg"></td>
+                            </tr>
+                            <tr>
+                                <td>ä</td>
+                                <td>ä</td>
+                                <td><a href="update.php"><img src="img/pencile.svg"><a href="income.php"><img src="img/delete.svg"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+         </main>
+</body>
 </html>
-
-
 
 

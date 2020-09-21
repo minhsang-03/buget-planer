@@ -1,125 +1,103 @@
+header{
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  background: linear-gradient(135deg, rgba(114, 208, 255, 1), #008cd1, rgb(119, 186, 248));
+  height: 60px;
+  width: 100%;
+}
+
+.button-nav {
+      color: #ffffff;
+     /* padding: 15px 100px;
+      margin: 10px 50px;
+      float: center;
+*/
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 9px 100px;      
+}
+
 .hover:hover {
-    color: black;
+  color: rgba(203, 209, 208);
 }
 
-.hover-bg:hover {
-    background-color:white;
+.hover-bg:hover{
+ background: rgba(114, 208, 255, 1);
+ 
 }
-
-a link:link{
-    color: yellow;
-}
-/*BACKGROUND-COLOR*/
-.bg-green {background-color: green;}
-.bg-blue {background-color: blue;}
-.bg-red {background-color: red;}
-.bg-yellow {background-color: yellow;}
-.bg-gray {background-color: gray;}
-.bg-lightgray {background-color: lightgray;}
-.bg-darkgray {background-color: darkgray;}
-.bg-black {background-color: black;}
-.bg-white {background-color: white;}
-.bg-lime {background-color: lime;}
-.bg-fuchsia {background-color: fuchsia;}
-.bg-aqua {background-color: aqua;}
-.bg-pink {background-color: pink;}
-.bg-orange {background-color: orange;}
-.bg-gold {background-color: gold;}
-.bg-olive {background-color: olive;}
-.bg-forestgreen {background-color: forestgreen;}
-.bg-teal {background-color: teal;}
-.bg-lightblue {background-color: lightblue;}
-.bg-royalblue {background-color: royalblue;}
-.bg-brown {background-color: brown;}
-.bg-sienna {background-color: sienna;}
-.bg-peru {background-color: peru;}
-.bg-sandybrown {background-color: sandybrown;}
-.bg-lightgray {background-color: #cfcfcf;}
-.bg-header {background-color: #64b7e0;}
-.bg-main {background-color: #dde1e0;}
-
-header {
-    background: linear-gradient(135deg, #72d0ff, #008cd1);
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+  background: lightgray;
   }
 
-/*WIDTH*/
-.w10 {width: 10%;}
-.w20 {width: 20%;}
-.w30 {width: 30%;}
-.w40 {width: 40%;}
-.w50 {width: 50%;}
-.w60 {width: 60%;}
-.w70 {width: 70%;}
-.w80 {width: 80%;}
-.w90 {width: 90%;}
-.w100 {width: 100%;}
-.w153 {width: 153px;}
-
-/*HOEHE*/
-.h-auto{height: auto;}
-.h10{height: 10%;}
-.h20{height: 20%;}
-.h30{height: 30%;}
-.h40{height: 40%;}
-.h50{height: 50%;}
-.h60{height: 60%;}
-.h70{height: 70%;}
-.h80{height: 80%;}
-.h90{height: 90%;}
-.h100{height: 100%;}
-
-.h10-px{height: 10px;}
-.h20-px{height: 20px;}
-.h30-px{height: 30px;}
-.h40-px{height: 40px;}
-.h50-px{height: 50px;}
-.h60-px{height: 60px;}
-.h70-px{height: 70px;}
-.h80-px{height: 80px;}
-.h90-px{height: 90px;}
-.h100-px{height: 100px;}
-
-.grid > * {
-    float: left;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+.logo {
+  width: 153px;
+  height: auto;
+  float: left;
 }
 
+.button-link {
+margin: 100px auto;
+background: white;
+color: black;
+border-radius: 8px;
+padding: 5px 19%;
+float: center;
+}
 
-.button {
-    font: bold 11px Arial;
-    text-decoration: none;
-    background-color: #1b1515;
-    color: #ffffff;
-    padding: 2px 50px 2px 50px;
-    border-top: 1px solid black;
-    border-right: 1px solid #000000;
-    border-bottom: 1px solid #000000;
-    border-left: 1px solid #000000;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-  }
+table {
+  width: 100%;
+  height: auto;
+  background:rgba(114, 208, 255, 1);
+  border-spacing: 0;
+  max-width: 100%;
+  border: 1px solid black;
+}
 
-.algin {text-align: center;}
-.padding:{ 2px 50px 2px 50px;}
+td {
+  border: 0.3px solid black;
+  background: rgb(243, 232, 232);
+  text-align: center;
+}
 
-.links {
-    float: left;
-    margin-right: 10px;
-    }
+.titel{
+  font-weight: 800;
+  text-decoration: underline solid black;
+}
 
-    .button1 {
-        
-        color: black;
-        padding: 2px 50px 2px 50px;
-        
-       
-      }
-    
+.abstand-header{
+  margin-top: 48px;
+}
 
-      .float {
-        float: left;
-      }
+.abstand{
+  display:flex;
+  justify-content: center;
+  align-items: left;
+  margin: auto;
+  flex-direction: column;
+}
+
+.abstand-button {
+  margin-top: 10px;
+}
+
+.green{
+  color: rgb(97, 192, 92);
+}
+
+.red{
+  color: rgb(255, 64, 64);
+}
+
+.blau{
+  color: rgb(60, 145, 224);
+}
+
+/*td:nth-of-type(3){
+  color: #008cd1;
+}
+*/

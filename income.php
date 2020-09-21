@@ -1,34 +1,38 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="test.css">
-    <title>income</title>
 </head>
-<body class="bg-main">
-    <header class="h60-px" >
-        <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/710/3747343710_ddb931df-3a0d-4972-94d2-297f36396130.png?cb=1600346120" class="w153 links"  >    
-        <nav>
-        <a href="index.php" class="button algin hover hover-bg" >Home</a>
-        <a href="expenditure.php" class="button hover hover-bg">expenditure</a>
-        <a href="income.php" class="button hover hover-bg">income</a>
-    </nav> 
- 
-    </header>
-    
-    <main>
+<body>
+    <div>
+        <header>
+            <div>
+            <a href="index.php"><img src="img/Logo.png" alt="Logo" class="logo"></a>
+            </div>
+            <div>
+                <nav class="button-nav">
+                    <a href="index.php" class="hover button-nav">Home</a>
+                    <a href="expenditure.php" class="hover button-nav">expenditure</a>
+                    <a href="income.php" class="hover button-nav">income</a>
+                </nav>
+            </div>
+        </header>
+        <br>
+    <main class="abstand-header">
         <form>
-            <label for="Date">Date
-            <input type="date"  required>
+            <div class="abstand">
+            <label for="Date">Date 
+            <input type="date" required>
             </label>
-            <br> 
-            <label for="amount">anount</label>
+            <label for="amount">Amount
             <input type="number" min="0.05" value="0.00"  minlength="3" required >
-            <br> 
-            <label for="category">category</label>
+            </label>
+            <label for="category">Category
             <input list="browsers" name="category" required>
+            </label>
             <datalist id="browsers">
                 <option value="Haushalt">
                 <option value="Verpflegung">
@@ -40,12 +44,15 @@
                 <option value="Sonstige Ausgaben">
                 </option>
             </datalist>
-            
-            <br>
-            <button>clear</button>
-            <button>create</button>
+            </div>
+            <div class="abstand-button">
+            <button>Clear</button>
+            <button>Create</button>
           </form>
+          </div>
     </main>
 </body>
 </html>
+
+
 

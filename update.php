@@ -24,13 +24,13 @@
     <main class="abstand-header">
         <form>
             <div class="abstand">
-            <label for="Date">Date 
+            <label for="Date">date 
             <input type="date" required>
             </label>
-            <label for="amount">Amount
+            <label for="amount">amount
             <input type="number" min="0.05" value="0.00"  minlength="3" required >
             </label>
-            <label for="category">Category
+            <label for="category">category
             <input list="browsers" name="category" required>
             </label>
             <datalist id="browsers">
@@ -46,8 +46,8 @@
             </datalist>
             </div>
             <div class="abstand-button">
-            <button>Clear</button>
-            <button>Create</button>
+            <button>clear</button>
+            <button>create</button>
           </form>
           </div>
     </main>
