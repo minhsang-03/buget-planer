@@ -9,16 +9,9 @@
 <body>
     <div>
         <header>
-            <div>
-            <a href="index.php"><img src="img/Logo.png" alt="Logo" class="logo"></a>
-            </div>
-            <div>
-                <nav class="button-nav">
-                    <a href="index.php" class="hover button-nav">Home</a>
-                    <a href="expenditure.php" class="hover button-nav">expenditure</a>
-                    <a href="income.php" class="hover button-nav">income</a>
-                </nav>
-            </div>
+            <?php
+                include "header.php"
+            ?>
         </header>
         <br>
     <main class="abstand-header">

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,21 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
-    
+    <body>
         <header>
-            <div class="fixed-header">
-                <a href="index.php"><img src="img/Logo.png" alt="Logo" class="logo"></a>
-                <nav class="button-nav">
-                    <a href="index.php" class="hover button-nav">Home</a>
-                    <a href="expenditure.php" class="hover button-nav">Expenditure</a>
-                    <a href="income.php" class="hover button-nav">Income</a>
-                </nav>
-            </div>
+            <?php
+                include "header.php"
+            ?>
         </header>
   
     
-         <main>
+        <main>
             <div class="abstand-header">
                 <br>
                 <a href="aktelles Jahr" class="button-link hover-bg">Current Year</a>
@@ -29,7 +24,6 @@
                 <p class="red">Expenditure</p>
                 <p class="blau">Difference</p>
                 <p class="titel">Income</p>
-                <div>
                     <table class="tabelle">
                             <tr>
                                 <th>Date</th>
@@ -46,7 +40,7 @@
                             <tr>
                                 <td>ä</td>
                                 <td>ä</td>
-                                <td><a href="update.php"><img src="img/pencile.svg"><a href="income.php"><img src="img/delete.svg"></td>
+                                <td><a href="update.php"><img src="img/pencile.svg" alt="pencil"><a href="income.php"><img src="img/delete.svg"></td>
                             </tr>
                             <tr>
                                 <td>ä</td>
@@ -74,10 +68,9 @@
                                 <td><a href="update.php"><img src="img/pencile.svg"><a href="income.php"><img src="img/delete.svg"></td>
                         </tr>
                     </table>
-                </div>
             </div>
-         </main>
-</body>
+        </main>
+    </body>
 </html>
 
 

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,52 +8,42 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div>
-        <header>
-            <div>
-            <a href="index.php"><img src="img/Logo.png" alt="Logo" class="logo"></a>
-            </div>
-            <div>
-                <nav class="button-nav">
-                    <a href="index.php" class="hover button-nav">Home</a>
-                    <a href="expenditure.php" class="hover button-nav">expenditure</a>
-                    <a href="income.php" class="hover button-nav">income</a>
-                </nav>
-            </div>
-        </header>
-        <br>
+    <header>
+            <?php
+                include "header.php"
+            ?>
+    </header>
+    <br>
     <main class="abstand-header">
         <form>
             <div class="abstand">
-            <label for="Date">Date 
-            <input type="date" required>
-            </label>
-            <label for="amount">Amount
-            <input type="number" min="0.05" value="0.00"  minlength="3" required >
-            </label>
-            <label for="category">Category
-            <input list="browsers" name="category" required>
-            </label>
-            <datalist id="browsers">
-                <option value="Haushalt">
-                <option value="Verpflegung">
-                <option value="Freizeit, Sport & Hobby">
-                <option value="Kommunikation & Medien">
-                <option value="Verkehr, Auto & Transport">
-                <option value="Persönliche Ausgaben">
-                <option value="Gesundheit">
-                <option value="Sonstige Ausgaben">
-                </option>
-            </datalist>
+                <label for="Date">Date 
+                <input type="date" required>
+                </label>
+                <label for="amount">Amount
+                <input type="number" min="0.05" value="0.00"  minlength="3" required >
+                </label>
+                <label for="category">Category
+                <input list="browsers" name="category" required>
+                </label>
+                <datalist id="browsers">
+                    <option value="Haushalt">
+                    <option value="Verpflegung">
+                    <option value="Freizeit, Sport & Hobby">
+                    <option value="Kommunikation & Medien">
+                    <option value="Verkehr, Auto & Transport">
+                    <option value="Persönliche Ausgaben">
+                    <option value="Gesundheit">
+                    <option value="Sonstige Ausgaben">
+                    </option>
+                </datalist>
             </div>
             <div class="abstand-button">
-            <button>Clear</button>
-            <button>Create</button>
-          </form>
+                <button>Clear</button>
+                <button>Submit</button>
+        </form>
           </div>
     </main>
 </body>
 </html>
-
-
 
