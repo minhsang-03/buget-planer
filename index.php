@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+    <?php
+        include "head.php";
+    ?>
     <body>
         <header>
             <?php
-                include "header.php"
+                include "header.php";
             ?>
         </header>
   
@@ -13,9 +16,9 @@
                 <br>
                 <a href="aktelles Jahr" class="button-link hover-bg">Current Year</a>
                 <a href="akteller Monat" class="button-link hover-bg">Current Month<a>
-                <p class="green">Income</p>
-                <p class="red">Expenditure</p>
-                <p class="blau">Difference</p>
+                <?php
+                    include "income_expenditure_difference.php"
+                ?>
                 <p class="titel">Income</p>
                 <?php
                     include "tables.php";
