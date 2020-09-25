@@ -27,5 +27,3 @@
         </main>
     </body>
 </html>
-
-

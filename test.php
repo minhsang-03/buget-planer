@@ -1,53 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-    <body>
-        <header>
-            <?php
-                include "header.php"
-            ?>
-        </header>
-  
-    
-        <main>
-            <div class="abstand-header">
-                <br>
-                <a href="aktelles Jahr" class="button-link hover-bg">Current Year</a>
-                <a href="akteller Monat" class="button-link hover-bg">Current Month<a>
-                <br>
-            
-            <?php 
-                $expenditures = array(
-                    ["amount"=> 5, "date"=> "12.5.2020"], 
-                    ["amount"=> 10, "date"=> "12.3.2020"], 
-                    ["amount"=> 15, "date"=> "12.2.2020"],
-                    ["amount"=> 100, "date"=> "2.12.2020"]);
-            ?>
-                <?php
-    
-    $expenditures = array(
-        ["amount"=> 5, "date"=> "12.5.2020"], 
-        ["amount"=> 10, "date"=> "12.3.2020"], 
-        ["amount"=> 15, "date"=> "12.2.2020"],
-        ["amount"=> 100, "date"=> "2.12.2020"]);
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDBPDO";
 
-        $sum = 0;
-        foreach($expenditures AS $key => $expenditure) {
-           $sum = $sum +  $expenditure["amount"];
-        }
-        echo "Resultat:" . $sum . "<br>";
-        ?>
+try {
+  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        
-                <p class="red">Expenditure</p>
-                <p class="blau">Difference</p>
-                <p class="titel">Income</p>
-                <?php
-                    include "tables.php";
-                 ?>
-            </div>
-        </main>
-    </body>
-</html>
+  // sql to create table
+  $sql = "CREATE TABLE MyGuests (
+  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  firstname VARCHAR(30) NOT NULL,
+  lastname VARCHAR(30) NOT NULL,
+  email VARCHAR(50),
+  reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  )";
 
+  // use exec() because no results are returned
+  $conn->exec($sql);
+  echo "Table MyGuests created successfully";
+} catch(PDOException $e) {
+  echo $sql . "<br>" . $e->getMessage();
+}
 
-echo $expenditures ["eins"] + $expenditures ["amount"];
+$conn = null;
+?>
