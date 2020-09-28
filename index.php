@@ -14,12 +14,12 @@
         <main>
             <div class="abstand-header">
                 <br>
-                <a href="aktelles Jahr" class="button-link hover-bg">Current Year</a>
-                <a href="akteller Monat" class="button-link hover-bg">Current Month<a>
+                <a href="alle" class="button-link hover-bg width_table">all</a>
+                <a href="aktelles Jahr" class="button-link hover-bg width_table">Current Year</a>
+                <a href="akteller Monat" class="button-link hover-bg width_table">Current Month<a>
                 <?php
-                    include "income_expenditure_difference.php"
+                    include "income_expenditure_difference.php" ;
                 ?>
-                <p class="titel">Income</p>
                 <?php
                     include "tables.php";
                  ?>

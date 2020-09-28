@@ -45,7 +45,7 @@ margin: 100px auto;
 background: white;
 color: black;
 border-radius: 8px;
-padding: 5px 19%;
+padding: 5px 13%;
 float: center;
 
 /*display: flex;
@@ -89,7 +89,8 @@ td {
 }
 
 .abstand-button {
-  margin-top: 10px;
+  padding:  1px 45px ;
+  text-align: center;
 }
 
 .green{
@@ -108,3 +109,31 @@ td {
   color: #008cd1;
 }
 */
+
+.float-left{
+  float: left;
+}
+
+.input_date{
+  margin: 5px 53px;
+}
+
+.input_amount{
+  margin: 5px 27px;
+}
+
+.input_category{
+  margin: 5px 20px;
+}
+
+.double_underline {
+  border-bottom: double 3px #000000;
+}
+
+.width_table{
+  width: 33.33%;
+}
+
+.text{
+  align: center ;
+}
