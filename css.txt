@@ -320,6 +320,67 @@
 .display-inline-block{display: inline-block;}
 
 
-
-
 /*class="text-green"*/
+
+
+
+
+
+---------------------------------------------------------
+Website: https://www.mysqltutorial.org/mysql-aggregate-functions.aspx  > https://www.mysqltutorial.org/
+
+
+----min wert ausgeben
+SELECT 
+    MIN(amount)
+FROM
+    income;
+
+---- maximale wert ausgeben
+SELECT 
+    MAX(amount)
+FROM
+    income;
+
+---- maximale wert mit bestimmte datum ausgebebn
+ SELECT 
+    MAX(amount) largest_payment_2004
+FROM
+    income
+WHERE
+    YEAR(date) = 2004;
+
+---- grösste wert ausgeben mit reihefolge
+    SELECT 
+    id, MAX(amount)
+FROM
+    income
+GROUP BY id
+ORDER BY MAX(amount);
+
+---- wert ausgeben die mehr als 200 sind mit reihefolge
+SELECT 
+    id, MAX(amount)
+FROM
+    income
+GROUP BY id
+HAVING MAX(amount) > 200
+ORDER BY MAX(amount);
+
+--- alle werte zusammen addieren und ausgebebn
+SELECT 
+    AVG(amount) 'Average Price'
+FROM
+    income;
+
+
+
+    <option value="">
+            <option value="Verpflegung">
+            <option value="Freizeit, Sport & Hobby">
+            <option value="Kommunikation & Medien">
+            <option value="Verkehr, Auto & Transport">
+            <option value="Persönliche Ausgaben">
+            <option value="Gesundheit">
+            <option value="Sonstige Ausgaben">
+            </option>
