@@ -1,13 +1,5 @@
 <?php
-    $servername = "localhost";
-    $user = "root";
-    $dbName = "budget-planer";
-    $db_connection = new mysqli($servername, $user, null, $dbName);
-
-    if($db_connection->connect_error) {
-        die("ERROR.". $db_connection->connect_error); 
-    }
-    
+    include "connection_Mysql.php";
 
     $sql_query = "SELECT `id`, `name` FROM `category`";
     $result = $db_connection->query($sql_query);
@@ -23,7 +15,7 @@
 ?>
 
 
-<form action="" method="post">
+<form action="form.php" method="post">
     <div class="abstand">
         <div class="float-left">
             <label for="Date">Date: </label>
@@ -47,15 +39,13 @@
     </div>
 </form>
 <?php
-/*
-    if(isset($_POST["submit"]));
-    $date = $_POST("date")
-    $amount = $_POST("amount")
-    $category = $_POST("category")
 
-    $submit = $db->prepare("insert into income (date, amount, category) Values(?,?,?())");
-    $submit -> bind_param("ssi, date, amount, category");
-    $submit -> execute();
-    endif;
-    */
+    if(isset($_POST["date"])) {
+        $date = $_POST["date"];
+    
+
+        echo $date;die;
+    
+    };
+
 ?>

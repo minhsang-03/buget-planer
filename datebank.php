@@ -1,13 +1,5 @@
 <?php
-    $servername = "localhost";
-    $user = "root";
-    $dbName = "budget-planer";
-    $con = new mysqli($servername, $user, null, $dbName);
-
-    if($con->connect_error) {
-        die("Error .". $con->connect_error); 
-    }
-    echo "connected";
+    include "connection_Mysql.php";
 
     $sql = "SELECT * FROM income";
     $result = $con->query($sql);
