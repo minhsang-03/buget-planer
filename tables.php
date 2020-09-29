@@ -5,7 +5,7 @@
     $db_connection = new mysqli($servername, $user, null, $dbName);
 
     if($db_connection->connect_error) {
-        die("ERROR.". $db_connection->connect_error); 
+        die("ERROR". $db_connection->connect_error); 
     }
 
     $sql_query = "SELECT `id`, `amount`, `date` FROM `income`";
@@ -22,16 +22,16 @@
 ?>
 
 <?php
-$servername = "localhost";
-$user = "root";
-$dbName = "budget-planer";
-$db_connection = new mysqli($servername, $user, null, $dbName);
+    $servername = "localhost";
+    $user = "root";
+    $dbName = "budget-planer";
+    $db_connection = new mysqli($servername, $user, null, $dbName);
 
-if($db_connection->connect_error) {
+    if($db_connection->connect_error) {
     die("ERROR.". $db_connection->connect_error); 
-}
+    }
 
-$sql_query = "SELECT `id`, `amount`, `date` FROM `expenditure`";
+    $sql_query = "SELECT `id`, `amount`, `date` FROM `expenditure`";
     $result = $db_connection->query($sql_query);
     $expenditures = [];
     if ($result->num_rows > null) {
@@ -43,40 +43,19 @@ $sql_query = "SELECT `id`, `amount`, `date` FROM `expenditure`";
     //print_r ($categories);
     $db_connection->close();
 ?>
-
 <table class="tabelle">
-    <tr>
-        <th>Date</th>
-        <th>Amount</th>
-        <th>Action</th>
-    </tr>   
-
-        <?php
-            foreach($incomes as $income) { ?>
-                <tr class=tabelle-linie> 
-                    <div>
-                        <td class="width_table"><?php print_r ($income ["date"]) ?></td>
-                        <td class="width_table"><?php print_r ($income ["amount"]) ?></td> 
-                        <td class="width_table"><a href="update.php"><img src="img/pencile.svg"><a href="income.php"><img src="img/delete.svg"></td>
-                    </div>
-                </tr>
-            <?php } ?> 
+    <?php include "table_head.php"?>
+    <?php
+        foreach($incomes as $items) { ?>
+    <?php include "table_row.php"?>
+        <?php } ?> 
 </table>
-        <p class="titel">Expenditure</p>
-        <table class="tabelle">
-            <tr>
-                <th>Date</th>
-                <th>Amount</th> <!--kopfzeile--> 
-                <th>Action</th>
-            </tr>     
-        <?php
-            foreach($expenditures as $expenditure) { ?>
-                <tr class=tabelle-linie> 
-                    <td class="width_table"><?php print_r ($expenditure ["date"]) ?></td>
-                    <td class="width_table"><?php print_r ($expenditure ["amount"]) ?></td> 
-                    <td class="width_table"><a href="update.php"><img src="img/pencile.svg"><a href="income.php"><img src="img/delete.svg"></td>
-                </tr>
-            <?php } ?> 
-        </table>
+<p class="titel">Expenditure</p>
+<table class="tabelle">
+    <?php include "table_head.php"?>
+    <?php foreach($expenditures as $items) { ?>
+    <?php include "table_row.php"?>
+    <?php } ?> 
+</table>
 
         

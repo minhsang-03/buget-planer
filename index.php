@@ -14,8 +14,8 @@
         <main>
             <div class="abstand-header">
                 <br>
-                <a href="alle" class="button-link hover-bg width_table">all</a>
-                <a href="aktelles Jahr" class="button-link hover-bg width_table">Current Year</a>
+                <a href="button_all.php" class="button-link hover-bg width_table">all</a>
+                <a href="button_current_year.php" class="button-link hover-bg width_table">Current Year</a>
                 <a href="akteller Monat" class="button-link hover-bg width_table">Current Month<a>
                 <?php
                     include "income_expenditure_difference.php" ;
