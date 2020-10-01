@@ -23,17 +23,27 @@ include "connection_Mysql.php";
                 <?php
   
 
-    $sql_query = "SELECT `id`, `amount`, `date` FROM `income` WHERE YEAR(date) = 2020";
+    $sql_query = 
+        "SELECT * 
+        FROM `income` 
+        WHERE 
+            YEAR(date) = YEAR(NOW()) 
+            AND MONTH(date) = MONTH(NOW())";
     $result = $db_connection->query($sql_query);
     $incomes = [];
     if ($result->num_rows > null) {
        $incomes = $result->fetch_all(MYSQLI_ASSOC);
-    // output data of each rowzh
+    // output data of each row
     } else {
     print_r ("0 results");
     }
 
-    $sql_query = "SELECT `id`, `amount`, `date` FROM `expenditure` WHERE YEAR(date) = 2020";
+    $sql_query = 
+        "SELECT * 
+        FROM `expenditure` 
+        WHERE 
+            YEAR(date) = YEAR(NOW()) 
+            AND MONTH(date) = MONTH(NOW())";
     $result = $db_connection->query($sql_query);
     $expenditures = [];
     if ($result->num_rows > null) {
@@ -78,7 +88,12 @@ include "connection_Mysql.php";
         die("ERROR.". $db_connection->connect_error); 
     }
 
-    $sql_query = "SELECT `id`, `amount`, `date` FROM `income` WHERE YEAR(date) = 2020";
+    $sql_query = 
+        "SELECT * 
+        FROM `income` 
+        WHERE 
+            YEAR(date) = YEAR(NOW()) 
+            AND MONTH(date) = MONTH(NOW())";
     $result = $db_connection->query($sql_query);
     $incomes = [];
     if ($result->num_rows > null) {
@@ -101,7 +116,12 @@ if($db_connection->connect_error) {
     die("ERROR.". $db_connection->connect_error); 
 }
 
-$sql_query = "SELECT `id`, `amount`, `date` FROM `expenditure` WHERE YEAR(date) = 2020";
+$sql_query = 
+    "SELECT * 
+    FROM `expenditure` 
+    WHERE 
+        YEAR(date) = YEAR(NOW()) 
+        AND MONTH(date) = MONTH(NOW())";
     $result = $db_connection->query($sql_query);
     $expenditures = [];
     if ($result->num_rows > null) {

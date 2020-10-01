@@ -15,7 +15,7 @@
 ?>
 
 
-<form action="form.php" method="post">
+<form action="save_income.php" method="post">
     <div class="abstand">
         <div class="float-left">
             <label for="Date">Date: </label>
@@ -25,7 +25,7 @@
             <input type="number" min="0.05" value="0.00"  minlength="3" class="input_amount" name="amount" required >
             <br>
             <label for="category">Category: </label>
-            <select name="select" required class="input_category">
+            <select name="category" required class="input_category">
                 <?php foreach($categories AS $key => $category){ ?>
                     <option> <?php print_r ($category["name"]) ?> 
                     </option>
@@ -34,18 +34,7 @@
         </div>
     </div>
     <div class="text">
-        <button class="abstand-button">Clear</button>
-        <input class="abstand-button" type="submit" name="Submit" value="Submit">
+            <button class="abstand-button"  onClick="window.location.reload();">Clear</button>
+            <button class="abstand-button" type="submit">Save</Button>
     </div>
 </form>
-<?php
-
-    if(isset($_POST["date"])) {
-        $date = $_POST["date"];
-    
-
-        echo $date;die;
-    
-    };
-
-?>
