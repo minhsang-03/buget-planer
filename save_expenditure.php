@@ -14,8 +14,6 @@
         print_r ($result);
         $db_connection->close();
         print_r ($sql_query);
-        /*
         header("Location: http://localhost/budget-planer/expenditure.php?success=1" );
         exit();
-        */
 ?>
