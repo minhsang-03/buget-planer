@@ -25,9 +25,9 @@
             <input type="number" min="0.05" value="0.00"  minlength="3" class="input_amount" name="amount" required >
             <br>
             <label for="category">Category: </label>
-            <select name="category" required class="input_category">
+            <select  name="category" required class="input_category">
                 <?php foreach($categories AS $key => $category){ ?>
-                    <option> <?php print_r ($category["name"]) ?> 
+                    <option value="<?php print_r ($category["id"]) ?>"> <?php print_r ($category["name"]) ?> 
                     </option>
                 <?php } ?>   
             </select>

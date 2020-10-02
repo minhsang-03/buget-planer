@@ -1,6 +1,6 @@
 <?php
     include "connection_Mysql.php";
-    $sql_query = "SELECT `id`, `amount`, `date` FROM `income`";
+    $sql_query = "SELECT income.id, `amount`, `date`, category.name FROM `income` JOIN category ON income.category_id = category.id";
     $result = $db_connection->query($sql_query);
     $incomes = [];
     if ($result->num_rows > null) {
@@ -9,7 +9,6 @@
     } else {
     print_r ("0 results");
     }
-    //print_r ($categories);
     $db_connection->close();
 ?>
 
@@ -23,7 +22,7 @@
     die("ERROR.". $db_connection->connect_error); 
     }
 
-    $sql_query = "SELECT `id`, `amount`, `date` FROM `expenditure`";
+    $sql_query = "SELECT expenditure.id, `amount`, `date`, category.name FROM `expenditure` JOIN category ON expenditure.category_id = category.id";
     $result = $db_connection->query($sql_query);
     $expenditures = [];
     if ($result->num_rows > null) {
@@ -32,7 +31,6 @@
     } else {
     print_r ("0 results");
     }
-    //print_r ($categories);
     $db_connection->close();
 ?>
 <table class="tabelle">

@@ -384,3 +384,23 @@ FROM
             <option value="Gesundheit">
             <option value="Sonstige Ausgaben">
             </option>
+
+
+/*
+    $sql = "INSERT INTO income (id, amount, date) Values (11, 12.40, '2020.08.10');";
+
+
+    if($db -> multi_query($sql) === true {}
+    if(isset($_POST["amount"])) {
+        echo "Verbindung ist da";
+    }else{
+        echo "Verbindungsfehrler error";
+    }
+    $sql = "INSERT INTO income (amount, date, category)
+    VALUES ('".$_POST["amount"]."','".$_POST["date"]."','".$_POST["category"]."')";*/
+
+
+    $url = "http://localhost/budget-planer/income.php";
+function redirect($url, $erfolgreich = 303){
+   header("Location: $url" , true, $erfolgreich);
+    }

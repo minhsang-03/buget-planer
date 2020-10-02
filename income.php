@@ -13,6 +13,10 @@
     <main class="abstand-header">
         <?php
             include "form_income.php";
+            if ( isset($_GET['success']) && $_GET['success'] == 1 )
+    {
+            echo "eintrag erfolgreich eingetragen";
+    }
         ?>
     </main>
 </body>

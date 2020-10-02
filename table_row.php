@@ -6,6 +6,9 @@
         <?php print_r ($items ["amount"]) ?>
     </td> 
     <td class="width_table">
+        <?php print_r ($items ["name"]) ?>
+     </td>
+    <td class="width_table">
         <a href="update.php?id=<?php echo $items["id"] ?>">
             <img src="img/pencile.svg">
         </a>

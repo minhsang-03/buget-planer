@@ -15,7 +15,7 @@
 ?>
 
 
-<form action="form.php" method="post">
+<form action="save_expenditure.php" method="post">
     <div class="abstand">
         <div class="float-left">
             <label for="Date">Date: </label>
@@ -39,16 +39,3 @@
     </div>
 </form>
 <?php
-    $sql = "INSERT INTO income (id, amount, date) Values (11, 12.40, '2020.08.10');";
-
-
-    /*if($db -> multi_query($sql) === true {}*/
-    if(isset($_POST["amount"])) {
-        echo "Verbindung ist da";
-    }else{
-        echo "Verbindungsfehrler error";
-    }
-
-    
-
-?>
