@@ -404,3 +404,8 @@ FROM
 function redirect($url, $erfolgreich = 303){
    header("Location: $url" , true, $erfolgreich);
     }
+
+
+    "SELECT `id`, `amount`, `date` FROM `income` WHERE YEAR(date) = 2020"
+
+    "SELECT `id`, `amount`, `date` FROM `expenditure` WHERE YEAR(date) = 2020"

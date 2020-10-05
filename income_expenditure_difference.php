@@ -1,8 +1,22 @@
 <?php
     include "connection_Mysql.php";
 
-    $sql_query = "SELECT `id`, `amount`, `date` FROM `income`";
-    $result = $db_connection->query($sql_query);
+    if ( isset($_GET['filter']) && $_GET['filter'] == "current_year" )
+    {
+        $sql_query_expenditure = "SELECT `id`, `amount`, `date` FROM `expenditure` WHERE YEAR(date) = YEAR(NOW())";
+        $sql_query_income = "SELECT `id`, `amount`, `date` FROM `income` WHERE YEAR(date) = YEAR(NOW())";
+    } else if ( isset($_GET['filter']) && $_GET['filter'] == "current_month" )
+    {
+        $sql_query_expenditure = "SELECT `id`, `amount`, `date` FROM `expenditure` WHERE YEAR(date) = YEAR(NOW()) AND MONTH(date) = MONTH(NOW())";
+        $sql_query_income = "SELECT `id`, `amount`, `date` FROM `income` WHERE YEAR(date) = YEAR(NOW()) AND MONTH(date) = MONTH(NOW())";
+    } else {
+        $sql_query_expenditure = "SELECT `id`, `amount`, `date` FROM `expenditure`";
+        $sql_query_income = "SELECT `id`, `amount`, `date` FROM `income`";
+    }
+   
+
+
+    $result = $db_connection->query($sql_query_income);
     $incomes = [];
     if ($result->num_rows > null) {
        $incomes = $result->fetch_all(MYSQLI_ASSOC);
@@ -10,9 +24,9 @@
     } else {
         print_r ("0 results");
     }
+    
 
-    $sql_query = "SELECT `id`, `amount`, `date` FROM `expenditure`";
-    $result = $db_connection->query($sql_query);
+    $result = $db_connection->query($sql_query_expenditure);
     $expenditures = [];
     if ($result->num_rows > null) {
        $expenditures = $result->fetch_all(MYSQLI_ASSOC);

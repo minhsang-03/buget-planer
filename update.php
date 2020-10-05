@@ -12,7 +12,7 @@
             ?>
         </header>
         <br>
-    <main class="abstand-header">
+    <main class="abstand-header">;
     </main>
 </body>
 </html>

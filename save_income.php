@@ -14,6 +14,6 @@
         print_r ($result);
         $db_connection->close();
         print_r ($sql_query);
-        header("Location: http://localhost/budget-planer/income.php?success=1" );
+        header("Location: income.php?success=1" );
         exit();  
 ?>
