@@ -1,19 +1,24 @@
 <tr class=tabelle-linie> 
     <td class="width_table">
-        <?php print_r ($items ["date"]) ?>
+        <?php print_r ($item ["date"]) ?>
     </td>
     <td class="width_table">
-        <?php print_r ($items ["amount"]) ?>
+        <?php print_r ($item ["amount"]) ?>
     </td> 
     <td class="width_table">
-        <?php print_r ($items ["name"]) ?>
+        <?php print_r ($item ["name"]) ?>
      </td>
     <td class="width_table">
-        <a href="update.php?id=<?php echo $items["id"] ?>">
+    <?php 
+        if ($item_type == 'income')
+        {
+            $url = "update_income.php?id=" .$item['id']; 
+        }else{
+            $url = "update_expenditure.php?id=" .$item['id']; 
+        } 
+    ?>
+        <a href="<?php echo $url ?>">
             <img src="img/pencile.svg">
-        </a>
-        <a href="income.php">
-            <img src="img/delete.svg">
         </a>
     </td>
 </tr>

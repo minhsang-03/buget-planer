@@ -1,7 +1,19 @@
 <?php
     include "connection_Mysql.php";
-    $sql_query = "SELECT income.id, `amount`, `date`, category.name FROM `income` JOIN category ON income.category_id = category.id";
-    $result = $db_connection->query($sql_query);
+    if ( isset($_GET['filter']) && $_GET['filter'] == "current_year" )
+    {
+        $sql_query_income = "SELECT income.id, `amount`, `date`, category.name FROM `income` JOIN category ON income.category_id = category.id  WHERE YEAR(date) = YEAR(NOW())";
+        $sql_query_expenditure = "SELECT expenditure.id, `amount`, `date`, category.name FROM `expenditure` JOIN category ON expenditure.category_id = category.id  WHERE YEAR(date) = YEAR(NOW())";
+    } else if ( isset($_GET['filter']) && $_GET['filter'] == "current_month" )
+    {
+        $sql_query_income = "SELECT income.id, `amount`, `date`, category.name FROM `income` JOIN category ON income.category_id = category.id  WHERE YEAR(date) = YEAR(NOW())  AND MONTH(date) = MONTH(NOW())";
+        $sql_query_expenditure = "SELECT expenditure.id, `amount`, `date`, category.name FROM `expenditure` JOIN category ON expenditure.category_id = category.id  WHERE YEAR(date) = YEAR(NOW())  AND MONTH(date) = MONTH(NOW())";
+    } else {
+        $sql_query_income = "SELECT income.id, `amount`, `date`, category.name FROM `income` JOIN category ON income.category_id = category.id" ;
+        $sql_query_expenditure = "SELECT expenditure.id, `amount`, `date`, category.name FROM `expenditure` JOIN category ON expenditure.category_id = category.id" ;
+    }
+
+    $result = $db_connection->query($sql_query_income);
     $incomes = [];
     if ($result->num_rows > null) {
        $incomes = $result->fetch_all(MYSQLI_ASSOC);
@@ -13,17 +25,9 @@
 ?>
 
 <?php
-    $servername = "localhost";
-    $user = "root";
-    $dbName = "budget-planer";
-    $db_connection = new mysqli($servername, $user, null, $dbName);
+    include "connection_Mysql.php";
 
-    if($db_connection->connect_error) {
-    die("ERROR.". $db_connection->connect_error); 
-    }
-
-    $sql_query = "SELECT expenditure.id, `amount`, `date`, category.name FROM `expenditure` JOIN category ON expenditure.category_id = category.id";
-    $result = $db_connection->query($sql_query);
+    $result = $db_connection->query($sql_query_expenditure);
     $expenditures = [];
     if ($result->num_rows > null) {
        $expenditures = $result->fetch_all(MYSQLI_ASSOC);
@@ -33,19 +37,25 @@
     }
     $db_connection->close();
 ?>
+<p class="titel">income</p>
 <table class="tabelle">
-    <?php include "table_head.php"?>
-    <?php
-        foreach($incomes as $items) { ?>
-    <?php include "table_row.php"?>
-        <?php } ?> 
+    <?php 
+        include "table_head.php";
+        $item_type = "income";
+        foreach($incomes as $item) { 
+            include "table_row.php";
+        }
+    ?> 
 </table>
-<p class="titel">Expenditure</p>
+<p class="titel">expenditure</p>
 <table class="tabelle">
-    <?php include "table_head.php"?>
-    <?php foreach($expenditures as $items) { ?>
-    <?php include "table_row.php"?>
-    <?php } ?> 
+    <?php 
+        include "table_head.php";
+        $item_type = "expenditure";
+        foreach($expenditures as $item) { 
+            include "table_row.php";
+        }
+    ?> 
 </table>
 
         

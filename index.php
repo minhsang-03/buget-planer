@@ -23,6 +23,14 @@
                 ?>
                 <?php
                     include "tables.php";
+                    if ( isset($_GET['deleted']) && $_GET['deleted'] == 1 )
+                     {
+                        echo "Eintrag wurde gelöscht";
+                     }
+                    elseif ( isset($_GET['updated']) && $_GET['updated'] == 1 )
+                    {
+                        echo "Eintrag wurde erfolgreich aktualisiert";
+                     }
                  ?>
             </div>
         </main>

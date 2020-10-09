@@ -409,3 +409,29 @@ function redirect($url, $erfolgreich = 303){
     "SELECT `id`, `amount`, `date` FROM `income` WHERE YEAR(date) = 2020"
 
     "SELECT `id`, `amount`, `date` FROM `expenditure` WHERE YEAR(date) = 2020"
+
+
+    <?php
+/*
+    include "connection_Mysql.php";
+
+    $sql = "UPDATE  expenditure.id, `amount`, `date`, category.id as category_id FROM `expenditure` 
+                JOIN category ON expenditure.category_id = category.id SET amount='', date='', category.id as category_id =''
+                WHERE  $result['category_id'] == $category['id']";
+
+$sql = "DELETE FROM expenditure WHERE $result['category_id'] == $category['id']";
+*/
+?>
+
+$sql = "DELETE FROM expenditure WHERE $result['category_id'] == $category['id']"; 
+        print_r ($result); print_r ($category); print_r ($sql); 
+
+
+          include "connection_Mysql.php";    
+    $sql = "DELETE FROM 'expenditure'
+    WHERE id == $result[id]";
+    print_r ($sql)
+
+
+
+    update_expenditure.php?id=<?php echo $item["id"] ?>

@@ -6,11 +6,9 @@
     $categories = [];
     if ($result->num_rows > null) {
        $categories = $result->fetch_all(MYSQLI_ASSOC);
-    // output data of each row
     } else {
         print_r ("0 results");
     }
-    //print_r ($categories);
     $db_connection->close();
 ?>
 
